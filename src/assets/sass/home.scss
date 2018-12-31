@@ -1,0 +1,242 @@
+.about-me{
+
+  .top{
+    width: 100%;
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 2px 2px 10px 0 rgba(black, 0.2);
+    padding: 15px 0;
+    box-sizing: border-box;
+
+    .about-image-hover{
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      min-height: 300px;
+
+
+      &:hover{
+        .userimage {
+          transform: translateX(-100%) rotateY(-90deg);
+        }
+        .about-content-main{
+          transform: rotateY(0);
+        }
+      }
+
+      @media screen and (min-width: 600px) {
+        max-width: 300px;
+        max-height: 300px;
+        margin-bottom: 0;
+        margin-left: 10px;
+      }
+    }
+
+    .about-content-main{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $subColor;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transform-origin: left;
+      transition: all .5s ease;
+      transform: translateX(100%) rotateY(90deg);
+      box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+
+      .title, .sub-title{
+        text-align: center;
+      }
+
+      .title{
+        font-size: 30px;
+        margin-bottom: 20px;
+        color: $mainColor;
+      }
+
+      .sub-title{
+        color: $mainColor;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+    }
+
+    .userimage{
+      transform: rotateY(0);
+      transform-origin: right;
+      transition: all .5s ease;
+      flex: 1;
+      box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+      overflow: hidden;
+
+      img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+      }
+    }
+
+    .about-content{
+      flex: 1;
+      margin-left: 30px;
+      padding: 0 15px;
+
+
+      @media screen and (max-width: 600px) {
+        margin-left: 0;
+      }
+
+      .heading{
+        font-weight: 500;
+        color: darken($subColor, 20%);
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .details{
+        font-size: 15px;
+        line-height: 30px;
+        height: 90%;
+        box-sizing: border-box;
+        color: darken(white, 70%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .resumeDownload{
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 200px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        font-family: $mainFont;
+        cursor: pointer;
+        border: 2px solid $subColor;
+        background-color: $subColor;
+        color: white;
+        transition: all .5s ease;
+        margin: 10px 0;
+
+        &:hover{
+          box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+      }
+    }
+  }
+
+  .divider{
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto;
+    border-top: 1px solid darken(white, 20%);
+  }
+
+  .skillset-container{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    max-width: 1000px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    box-shadow: 2px 2px 10px 0 rgba(black, 0.2);
+
+    @media screen and (max-width: 650px) {
+      flex-direction: column-reverse;
+    }
+
+    .skillset-wrapper{
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+      min-width: 300px;
+
+      .item{
+        margin-bottom: 20px;
+
+        .label{
+          font-weight: bold;
+          font-size: 14px;
+          color:  darken($subColor, 20%);
+          margin-bottom: 30px;
+          text-transform: capitalize;
+        }
+
+        .progress{
+          width: 100%;
+          height: 1px;
+          background-color: darken(white, 20%);
+          position: relative;
+
+          .guage{
+            position: absolute;
+            top: 0;
+            background-color:  $mainColor;
+            left: 0;
+            height: 100%;
+          }
+
+          .seek{
+            position: absolute;
+            top: -24px;
+            font-size: 8px;
+            padding: 3px;
+            padding-bottom: 5px;
+            background-color: darken($mainColor, 20%);
+            transform: translate(-10px);
+            -webkit-clip-path: polygon(50% 100%, 100% 70%, 100% 0, 0 0, 0 70%);
+            clip-path: polygon(50% 100%, 100% 70%, 100% 0, 0 0, 0 70%);
+            color: white;
+          }
+        }
+      }
+    }
+
+    .skillset-Info{
+      min-width: 300px;
+      flex: 1;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: $mainColor;
+
+      @media screen and (min-width: 650px) {
+        max-width: 400px;
+      }
+
+      .heading{
+        font-weight: bold;
+      }
+      p{
+        font-size: 15px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.footer{
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darken(white, 80%);
+  color: $mainColor;
+  font-size: 14px;
+  font-family: $mainFont;
+}

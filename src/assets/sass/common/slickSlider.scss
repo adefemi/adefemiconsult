@@ -1,0 +1,27 @@
+.sliderMain{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  div{
+    height: 100%;
+    overflow: visible;
+    outline: none;
+    background-color: black;
+    color: white;
+  }
+
+  a{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    outline: none;
+  }
+}

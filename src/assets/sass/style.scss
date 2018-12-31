@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Roboto:400,400i,500,500i,700,700i');
+
+@import "./variable";
+@import "./main";
+@import "./home";
+@import "./service";
+@import "./store";
+@import "./auth";
+@import "./blog";
+@import "blogExplorer";
+@import "./general/header";
+@import "./general/modal";
+@import "general/slider";
+@import "general/projectList";
+@import "general/portfoliopage";
+@import "general/contact";
+@import "general/team";
+@import "common/slider";
+@import "common/serviceIn";
+@import "common/loader";
+@import "common/slickSlider";
+@import "common/go_up";
+@import "common/toast";
+@import "./explorer";
+@import "./profile";
+
+
+.switch-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  width: 100%;
+}

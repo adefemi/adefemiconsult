@@ -1,0 +1,68 @@
+.profile-wrapper{
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  .wrapper{
+    width: 100%;
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 20px auto;
+  }
+
+  .profile-con{
+    display: flex;
+    flex-wrap: wrap;
+
+
+    .left, .right{
+      flex: 1;
+      margin: 10px;
+      min-width: 300px;
+    }
+
+    h4{
+      font-size: 15px;
+      font-weight: 500;
+      color: darken(white, 70px);
+    }
+    label{
+      font-size: 13px;
+      display: block;
+      color: darken(white, 70px);
+      margin: 10px 0;
+    }
+    .input-group{
+      border: 1px solid darken(white, 10%);
+      height: 40px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
+      input{
+        //border: none;
+        flex: 1;
+        height: 100%;
+        border: none;
+        outline: none;
+      }
+      svg{
+        padding: 0 10px;
+      }
+    }
+    button{
+      background-color: $subColor;
+      color: white;
+      border: none;
+      outline: none;
+      font-size: 12px;
+      width: 200px;
+      height: 40px;
+      cursor: pointer;
+      text-transform: capitalize;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+html>*{
+  font-family: $mainFont;
+}
+
+html{
+  overflow-x: hidden;
+}
+
+html, body, ul, ol{
+  margin: 0; padding: 0;
+}
+textarea{
+  display: block;
+}
+html, body{
+  background-color: darken(white, 10%);
+}
+
+li{
+  list-style-type: none;
+}
+a, a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper{
+  width: 100%;
+  min-height: 50vh;
+}
+
+.button-loader{
+  display: flex;
+
+  li, ol{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    margin: 0 2px;
+    border-radius: 50%;
+  }
+}
+
+.butt-disabled{
+  cursor: not-allowed !important;
+  background-color: lightslategray !important;
+  border-color: lightslategray !important;
+
+  &:hover{
+    box-shadow: none !important;
+  }
+}
+
+.loading-butt{
+  animation: butt-loader infinite alternate 400ms ease;
+}
+
+.rotate-loading{
+  transform-origin: center;
+  animation: Rotator infinite 1000ms linear;
+}
+
+.main-notify{
+  padding: 20px 10px;
+  box-sizing: border-box;
+  border: 1px solid darken(white, 10%);
+  font-family: $subFont;
+  font-weight: 400;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  max-width: 1000px;
+}
+
+@keyframes butt-loader {
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.centerer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shareLinks{
+  display: flex;
+
+  li{
+    margin: 0 5px;
+    outline: none !important;
+  }
+}

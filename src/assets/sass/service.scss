@@ -1,0 +1,67 @@
+.service{
+  background-image: $serviceImage;
+}
+
+.service-container{
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-content{
+  max-width: 1000px;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  grid-gap: 2em;
+  margin: 50px 0;
+
+  li{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+    transition: all .5s ease;
+    max-width: 450px;
+    border: 1px solid darken(white, 10%);
+    box-sizing: border-box;
+
+    &:hover{
+      cursor: pointer;
+      box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    }
+    .service-svg{
+      width: 100%;
+      position: relative;
+      height: 250px ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: darken(white, 5%);
+      overflow: hidden;
+
+      img{
+        height: 100%;
+        display: block;
+        position: relative;
+      }
+    }
+    .item-title{
+      margin: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      font-family: $mainFont;
+      color: darken($subColor, 10%);
+      margin-top: 20px;
+    }
+    .service-detail{
+      font-size: 14px;
+      font-family: $mainFont;
+      line-height: 30px;
+      margin: 10px;
+    }
+  }
+}
